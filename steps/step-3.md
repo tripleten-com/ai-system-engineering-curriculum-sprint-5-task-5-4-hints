@@ -33,19 +33,19 @@ The platform already reads its token settings this way, so your loader can follo
 
 ### A misspelled field loads without an error
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 What does your model do with a field it doesn't define? Try a misspelled one in the shell.
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 How did your Task 1 contract handle extra fields? Use the same setting here.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Check nested blocks too, such as escalation and rollback. Each nested model needs the same rule.
 
@@ -53,25 +53,25 @@ Check nested blocks too, such as escalation and rollback. Each nested model need
 
 ### Your reason-code check accepts everything or nothing
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 What exactly does the guardrail's code list hold? Print it in the shell.
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Compare one entry with the stored `rejection_reason` from Step 1. Same form?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Is your check doing what you decided in Step 2: comparing whole codes, or the part before the colon?
 
 </details>
 
-<details><summary>Move 4</summary>
+<details><summary>Hint 4</summary>
 
 The approach: check each code in your list against the guardrail's own code list, imported from the guardrail module, in the form you chose. Keep the comparison rule for stored codes in one helper, so the tool can reuse it in the next Task.
 
@@ -79,19 +79,19 @@ The approach: check each code in your list against the guardrail's own code list
 
 ### You can't find a code list for the roles
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Search `src/` and `config/` for a role name such as `dispatcher`. Where does the full list of roles actually live?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 The lesson offers two ways to check an owner role. Which one survives a change to the access policy, and which one is simpler to test?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Choose one, say why in your note, and test that an unknown role is refused.
 
@@ -99,19 +99,19 @@ Choose one, say why in your note, and test that an unknown role is refused.
 
 ### The loader looks nothing like the platform's
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Open `src/api/security/tokens.py`. How does it turn `config/auth.yaml` into a checked object?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 What does it do when the file can't be read, or when a value is wrong?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 The approach: a typed model for the nine fields, one function that takes a path, reads the file and validates it into that model, and one error type that carries every failing field's name.
 
@@ -119,19 +119,19 @@ The approach: a typed model for the nine fields, one function that takes a path,
 
 ### The file loads, but you're not sure it says what the document says
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Put the file and the document side by side.
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 For each field in the file, which section of the document states it?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Change one place and you must change the other. Run the check command after your last edit to the file.
 
@@ -139,19 +139,19 @@ Change one place and you must change the other. Run the check command after your
 
 ### You can't add the check command
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Read how an existing small command is declared in `pyproject.toml`, one that runs a Python module.
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 What should it print on success, and what exit code should it return on failure?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Give your loader module a small entry point that loads the committed file, prints `valid` or the error, and returns the exit code. Then declare the task the same way the existing ones are declared.
 

@@ -27,19 +27,19 @@ The tool doesn't exist yet. Writing its contract first is the point: the code yo
 
 ### You don't know where a permitted value comes from
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which kind of value is it: a next step, a reason code, a role or an exception state?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Open the source the lesson names for that kind and find the value there.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 If the value isn't in any of the four sources, the platform doesn't know it, and the boundary can't permit it. Choose a value the source lists.
 
@@ -47,25 +47,25 @@ If the value isn't in any of the four sources, the platform doesn't know it, and
 
 ### A prohibition depends on the model behaving
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 For each "never", ask: what in the system makes it impossible?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 If the answer is "the model won't ask", what would happen the day it does?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 List the ports and credentials the tool will get. Which ones does it need for its one effect, and which ones would it never use?
 
 </details>
 
-<details><summary>Move 4</summary>
+<details><summary>Hint 4</summary>
 
 The approach: give the tool only the ports its one effect needs, and write every other service and credential as out of its reach. Each "never" then names what keeps it: a missing tool, a missing credential, or the approval point.
 
@@ -73,19 +73,19 @@ The approach: give the tool only the ports its one effect needs, and write every
 
 ### You can't decide how to store reason codes
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Look at the `rejection_reason` stored for your Step 1 exception. Is it a bare code, or a code with a field name after a colon?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 If your list holds bare codes, what does a check compare against a stored code with a colon? If it holds full codes, how many entries would it need?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Pick one form, write the comparison rule beside the list, and put the reason in your evidence note.
 
@@ -93,25 +93,25 @@ Pick one form, write the comparison rule beside the list, and put the reason in 
 
 ### You're not sure what a second review would mean
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where does the tool write the review packet? How many files can that path hold for one exception?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 If one run could open two reviews for the same exception, what would the dispatcher find, and which one would they trust?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Which calls count toward the limit: every call, or only calls that opened a review? Who sees enough to enforce it: the tool, which sees one call, or the agent, which sees the run?
 
 </details>
 
-<details><summary>Move 4</summary>
+<details><summary>Hint 4</summary>
 
 Set the limit from those answers, and write the reasoning beside it.
 
@@ -119,19 +119,19 @@ Set the limit from those answers, and write the reasoning beside it.
 
 ### The approval wait has no place to live
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Which section describes the approval point?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Does the configuration you write in Step 3 have a field for the wait?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 State the wait and what a late decision means in section 4 only, as the lesson says.
 
@@ -139,19 +139,19 @@ State the wait and what a late decision means in section 4 only, as the lesson s
 
 ### Escalation and rollback read like the same thing
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 One answers "the agent didn't act, who owns this now?". The other answers "the agent acted by mistake, how is it undone?". Which run endings belong to each?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Who runs the undo operation? If your answer is the agent, read the boundary's lists again.
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 For rollback, also write what it doesn't undo. Something already sent can't be unsent by a marker.
 

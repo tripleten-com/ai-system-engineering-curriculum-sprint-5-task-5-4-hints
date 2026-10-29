@@ -26,19 +26,19 @@ Your evidence note for this Task holds more design than the earlier ones: the ru
 
 ### A refusal test passes for the wrong reason
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 What does your test assert: that the loader raised, or that it raised about the field you broke?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Change two values in one bad copy. Can your test still tell which rule refused it?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Assert that the error names the field, and keep one change per copy.
 
@@ -46,19 +46,19 @@ Assert that the error names the field, and keep one change per copy.
 
 ### The good-file test breaks whenever you edit the configuration
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where does the test get its expected values?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 If they're typed into the test, which copy is right after an edit to the file?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Read the committed file in the test and compare the loaded object with what the file holds.
 
@@ -66,19 +66,19 @@ Read the committed file in the test and compare the loaded object with what the 
 
 ### Bad files leak into the repository
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Where do your tests write the broken copies?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Is there a test fixture that gives each test its own temporary folder, cleaned up afterwards?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Write every copy there, and run `git status` after your tests to confirm nothing new appeared.
 
@@ -86,19 +86,19 @@ Write every copy there, and run `git status` after your tests to confirm nothing
 
 ### The demo stopped working
 
-<details><summary>Move 1</summary>
+<details><summary>Hint 1</summary>
 
 Run `poe demo`. Where does it stop, and what does it print last?
 
 </details>
 
-<details><summary>Move 2</summary>
+<details><summary>Hint 2</summary>
 
 Did this Task change a file the demo reads, such as a script or a setting?
 
 </details>
 
-<details><summary>Move 3</summary>
+<details><summary>Hint 3</summary>
 
 Compare a demo run before and after your changes. Restore whatever the demo depended on, or update the demo so it still runs the vaccine exception to its summary.
 
