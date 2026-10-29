@@ -90,7 +90,7 @@ The CI workflow file must stay exactly as the template supplied it. Compare your
 
 ## In this Task
 
-<details><summary>`poe demo` stopped passing</summary>
+<details><summary><code>poe demo</code> stopped passing</summary>
 
 Did this Task change a file the demo reads, such as a script? Run the demo before and after your changes and compare where each run ends.
 
